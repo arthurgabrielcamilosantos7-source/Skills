@@ -1,0 +1,13 @@
+{
+  "agent-browser": { "repo": "vercel-labs/agent-browser", "path": "skills/agent-browser", "commit": "1fde6b9", "license": "Apache-2.0", "requires": "npm install -g agent-browser && agent-browser install" },
+  "design-taste-frontend": { "repo": "Leonxlnx/taste-skill", "path": "skills/taste-skill", "commit": "f6b7657", "license": "MIT" },
+  "find-skills": { "repo": "vercel-labs/skills", "path": "skills/find-skills", "commit": "57217cf", "license": "MIT" },
+  "grilling": { "repo": "mattpocock/skills", "path": "skills/productivity/grilling", "commit": "abeeaf9", "license": "MIT" },
+  "handoff": { "repo": "mattpocock/skills", "path": "skills/productivity/handoff", "commit": "abeeaf9", "license": "MIT" },
+  "chief-of-staff": { "repo": "mattpocock/skills", "path": "skills/in-progress/chief-of-staff", "commit": "abeeaf9", "license": "MIT", "note": "experimental (in-progress upstream); uses retro, to-spec, to-tickets, implement-spec" },
+  "retro": { "repo": "mattpocock/skills", "path": "skills/engineering/retro", "commit": "abeeaf9", "license": "MIT" },
+  "to-spec": { "repo": "mattpocock/skills", "path": "skills/engineering/to-spec", "commit": "abeeaf9", "license": "MIT" },
+  "to-tickets": { "repo": "mattpocock/skills", "path": "skills/engineering/to-tickets", "commit": "abeeaf9", "license": "MIT" },
+  "implement-spec": { "repo": "mattpocock/skills", "path": "skills/engineering/implement-spec", "commit": "abeeaf9", "license": "MIT" },
+  "skill-library": { "repo": "local", "license": "MIT", "note": "meta-skill that searches and grows this library" }
+}
