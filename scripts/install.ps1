@@ -2,6 +2,8 @@
 # Uso: powershell -ExecutionPolicy Bypass -File scripts\install.ps1
 # Opcional: -Only nome1,nome2 para instalar apenas algumas.
 param([string[]]$Only)
+# Com -File, "a,b" chega como um único texto; separa por vírgula.
+if ($Only) { $Only = $Only | ForEach-Object { $_ -split "," } | ForEach-Object { $_.Trim() } | Where-Object { $_ } }
 
 $root = Split-Path -Parent $PSScriptRoot
 $src = Join-Path $root "skills"
