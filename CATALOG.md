@@ -2,7 +2,7 @@
 
 Gerado por `node scripts/build-catalog.mjs`. Não edite à mão.
 
-Total: 77 skills
+Total: 78 skills
 
 | Skill | Quando usar | Origem |
 |---|---|---|
@@ -40,6 +40,7 @@ Total: 77 skills
 | [educational-content-and-how-to](skills/educational-content-and-how-to/SKILL.md) | The teach-to-grow content type -- pick a genuinely useful topic, teach ONE thing completely, structure it as a clear lesson, keep it accurate, and route it to the right format. Use when someone wants to teach their audience, make a how-to / tutorial / step-by-step / explainer / myth-buster, build... | [social-media-skills/skills](https://github.com/social-media-skills/skills) |
 | [exploratory-data-analysis](skills/exploratory-data-analysis/SKILL.md) | Performs bounded, local exploratory analysis of explicitly supported scientific files. Supports redacted CSV/TSV/JSON profiles; optional NumPy, HDF5, FASTA/FASTQ, and basic image metadata inspection; missingness/leakage audits; outlier and transformation sensitivity; and rigorous EDA report scaff... | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) |
 | [find-skills](skills/find-skills/SKILL.md) | Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable ... | [vercel-labs/skills](https://github.com/vercel-labs/skills) |
+| [free-llm-delegate](skills/free-llm-delegate/SKILL.md) | Delegate simple, non-confidential bulk text work to free models through the user's local FreeLLMAPI (http://127.0.0.1:3001) to save the main model's usage - classifying or tagging many items, simple summaries, extracting fields into JSON, first drafts, repetitive rewrites, preliminary research no... | ? |
 | [frontend-design](skills/frontend-design/SKILL.md) | Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults. | [anthropics/skills](https://github.com/anthropics/skills) |
 | [grilling](skills/grilling/SKILL.md) | Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases. | [mattpocock/skills](https://github.com/mattpocock/skills) |
 | [handoff](skills/handoff/SKILL.md) (manual: `/handoff`) | Compact the current conversation into a handoff document for another agent to pick up. | [mattpocock/skills](https://github.com/mattpocock/skills) |

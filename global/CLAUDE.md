@@ -11,4 +11,5 @@ Load only the skills a task needs; skip a skill when it adds nothing. Prefer one
 - **Design / UI**: frontend-design or design-taste-frontend (pages), ui-ux-pro-max (palettes, fonts, UX rules), theme-factory, canvas-design, algorithmic-art; always finish with visual-quality-review on the rendered result.
 - **Documents**: docs, docx, pdf, pptx, xlsx as the requested format requires; doc-coauthoring for long structured writing.
 - **Marketing**: the marketing skills in the library (copywriting, cro, content-strategy, social-strategy, marketing-psychology...).
+- **Saving usage**: free-llm-delegate for bulk, non-confidential, easy-to-check text work (never code, decisions or final review).
 - **Skills library**: skill-library to find or add a skill.
