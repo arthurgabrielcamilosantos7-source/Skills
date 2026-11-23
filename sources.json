@@ -502,5 +502,11 @@
     "repo": "local",
     "license": "MIT",
     "note": "own skill"
+  },
+  "free-llm-delegate": {
+    "repo": "local",
+    "license": "MIT",
+    "note": "own skill; delegates simple non-confidential tasks to the local FreeLLMAPI",
+    "requires": "FreeLLMAPI installed at C:/Users/dspar/freellmapi (see its LEIA-ME.md)"
   }
 }
