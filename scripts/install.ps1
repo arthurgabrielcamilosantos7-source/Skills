@@ -5,6 +5,8 @@
 #   powershell -ExecutionPolicy Bypass -File scripts\install.ps1 -Only a,b -Project "C:\caminho\do\projeto"
 # Também copia references\ (usado pelas skills ig-*) para o destino ..\references.
 param([string[]]$Only, [string]$Project)
+# Com -File, "a,b" chega como um unico texto; separa por virgula.
+if ($Only) { $Only = $Only | ForEach-Object { $_ -split "," } | ForEach-Object { $_.Trim() } | Where-Object { $_ } }
 
 $root = Split-Path -Parent $PSScriptRoot
 $src = Join-Path $root "skills"
