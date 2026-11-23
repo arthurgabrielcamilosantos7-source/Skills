@@ -27,3 +27,9 @@ A project's own CLAUDE.md and skills take precedence over this map.
 - Spend the main model on reasoning, code, decisions and final review. Do not re-read large files you already summarised; read only the parts you need.
 - Bulk text work (classifying or tagging many items, extracting fields to JSON, simple summaries of long public text, first drafts, repetitive rewrites) goes to free-llm-delegate when ALL hold: the content has no personal, client, patient, credential or private data; the result is easy to check; and the router answers at http://127.0.0.1:3001 (only on this PC, not in cloud sessions). Always check the result yourself. If the router is down or rate-limited, just do the task yourself.
 - For one short item, do it yourself: delegating costs more than it saves.
+
+# Model choice
+
+- Default model is `opusplan`: Sonnet executes, Opus plans. For complex work (architecture, hard bugs, multi-file changes, important decisions) enter plan mode first so the plan is made by Opus; routine edits, questions and small fixes run on Sonnet without planning.
+- Subagents: pass `model: "haiku"` for searches, file lookups and simple summaries; `"sonnet"` for routine implementation or review; `"opus"` only for hard reasoning the main thread needs.
+- If a session is pinned to Opus in the app's model picker, suggest switching to Sonnet when the remaining work is routine.
