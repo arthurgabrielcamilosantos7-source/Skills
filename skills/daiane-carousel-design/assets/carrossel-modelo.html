@@ -1,0 +1,77 @@
+<!doctype html>
+<!--
+  Modelo de carrossel da Daiane Menandro (1080x1350, 4:5).
+  Copie este arquivo para instagram-artes/<nome-do-carrossel>/carrossel.html
+  (as fontes são lidas de ../_fonte/). Edite só o conteúdo dos <section class="slide">.
+  Abra com #1, #2... para ver uma tela por vez (é assim que o render.mjs exporta).
+-->
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Carrossel</title>
+<style>
+@font-face{font-family:"Montserrat";src:url(../_fonte/montserrat.woff2) format("woff2");font-weight:100 900}
+@font-face{font-family:"Playfair";src:url(../_fonte/playfair-500-normal.woff2) format("woff2");font-weight:500}
+@font-face{font-family:"Playfair";src:url(../_fonte/playfair-500-italic.woff2) format("woff2");font-weight:500;font-style:italic}
+@font-face{font-family:"Vibes";src:url(../_fonte/great-vibes.woff2) format("woff2")}
+:root{--marrom:#4A2A1A;--escuro:#2E1E16;--dourado:#C9A15A;--dourado-claro:#E2C48A;--creme:#F5EAE0;--off:#FBF6F1;--vinho:#7A1E3A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--creme)}
+.slide{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--creme);color:var(--marrom);font-family:Montserrat,sans-serif;padding:150px 100px 200px;display:flex;flex-direction:column;justify-content:center}
+.slide.off{background:var(--off)}
+.slide.escuro{background:var(--escuro);color:var(--creme)}
+body.um .slide{display:none}
+body.um .slide.ativo{display:flex}
+.olho{font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:28px;color:var(--dourado);margin-bottom:36px}
+h1{font-family:Playfair;font-weight:500;font-size:96px;line-height:1.06;letter-spacing:-.01em}
+h2{font-family:Playfair;font-weight:500;font-size:72px;line-height:1.1;margin-bottom:36px}
+h1 em,h2 em{font-style:italic;color:var(--vinho)}
+.escuro h1 em,.escuro h2 em{color:var(--dourado-claro)}
+p{font-size:38px;line-height:1.5;max-width:860px}
+p+p{margin-top:28px}
+.fio{height:2px;width:100%;background:linear-gradient(90deg,transparent,var(--dourado),transparent);margin:48px 0}
+.num{width:120px;height:120px;border-radius:50%;border:3px solid var(--dourado);display:grid;place-items:center;font-family:Playfair;font-size:60px;color:var(--vinho);margin-bottom:44px}
+.assin{font-family:Vibes;font-size:84px;line-height:1;margin-top:40px}
+.btn{align-self:flex-start;background:var(--vinho);color:#fff;font-weight:600;font-size:38px;padding:34px 56px;border-radius:999px;margin-top:56px}
+.seta{position:absolute;right:100px;top:80px;font-size:26px;letter-spacing:.18em;text-transform:uppercase;color:var(--dourado);font-weight:600}
+.rodape{position:absolute;left:100px;right:100px;bottom:80px;display:flex;justify-content:space-between;align-items:center;font-size:26px;letter-spacing:.06em}
+.lotus{display:block;fill:none;stroke:var(--dourado);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="lotus" viewBox="0 0 64 50"><path d="M32 5C38.5 13 38.5 26 32 35C25.5 26 25.5 13 32 5Z"/><path d="M32 35C28.5 25 21 18.5 12 18C11.5 27.5 19.5 35 32 35Z"/><path d="M32 35C35.5 25 43 18.5 52 18C52.5 27.5 44.5 35 32 35Z"/><path d="M32 37C24 32 13 30.5 3.5 32.5C9.5 39 21 41 32 37Z"/><path d="M32 37C40 32 51 30.5 60.5 32.5C54.5 39 43 41 32 37Z"/><path d="M15 44.5Q32 48.5 49 44.5"/></symbol></svg>
+
+<!-- TELA 1: gancho -->
+<section class="slide">
+  <span class="seta">Arraste →</span>
+  <div class="olho">Psicanálise</div>
+  <h1>Título com a<br><em>palavra-chave</em></h1>
+  <div class="fio"></div>
+  <p>Subtítulo curto que promete o que a pessoa vai entender.</p>
+</section>
+
+<!-- TELAS DE CONTEÚDO: uma ideia por tela -->
+<section class="slide off">
+  <div class="num">1</div>
+  <h2>Primeira ideia em até oito palavras</h2>
+  <p>Até 30 palavras de apoio. Frases curtas, sem jargão, explicando o porquê.</p>
+</section>
+
+<!-- ÚLTIMA TELA: CTA -->
+<section class="slide escuro">
+  <h2>Quer conversar<br>sobre <em>isso</em>?</h2>
+  <p>Agende sua consulta pelo link da bio.</p>
+  <span class="btn">Agende pelo link da bio</span>
+  <div class="assin">Daiane Menandro</div>
+</section>
+
+<script>
+// Rodapé padrão em todas as telas.
+document.querySelectorAll('.slide').forEach(s=>{
+  s.insertAdjacentHTML('beforeend','<div class="rodape"><svg class="lotus" width="70" height="55"><use href="#lotus"/></svg><span>@daianemenandro.psi</span></div>');
+});
+// #N mostra só a tela N (usado na exportação).
+function mostrar(){const n=parseInt(location.hash.slice(1),10);const ss=[...document.querySelectorAll('.slide')];
+  if(n>0&&n<=ss.length){document.body.classList.add('um');ss.forEach((s,i)=>s.classList.toggle('ativo',i===n-1));}
+  else document.body.classList.remove('um');
+  document.title='Carrossel ('+ss.length+' telas)';}
+addEventListener('hashchange',mostrar);mostrar();
+</script>
+</body></html>
