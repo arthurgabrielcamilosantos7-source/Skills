@@ -15,5 +15,15 @@
   "web-artifacts-builder": {"repo": "anthropics/skills", "path": "skills/web-artifacts-builder", "commit": "e4bb5d9", "license": "Apache-2.0", "requires": "bash, node and pnpm (the init script installs pnpm and npm packages when you run it)"},
   "webapp-testing": {"repo": "anthropics/skills", "path": "skills/webapp-testing", "commit": "e4bb5d9", "license": "Apache-2.0", "requires": "Python with playwright (pip install playwright && playwright install chromium)"},
   "algorithmic-art": {"repo": "anthropics/skills", "path": "skills/algorithmic-art", "commit": "e4bb5d9", "license": "Apache-2.0"},
-  "doc-coauthoring": {"repo": "anthropics/skills", "path": "skills/doc-coauthoring", "commit": "e4bb5d9", "license": "Apache-2.0"}
+  "doc-coauthoring": {"repo": "anthropics/skills", "path": "skills/doc-coauthoring", "commit": "e4bb5d9", "license": "Apache-2.0"},
+  "verification-before-completion": {"repo": "obra/superpowers", "path": "skills/verification-before-completion", "commit": "22f0b46", "license": "MIT"},
+  "receiving-code-review": {"repo": "obra/superpowers", "path": "skills/receiving-code-review", "commit": "22f0b46", "license": "MIT"},
+  "diagnosing-bugs": {"repo": "mattpocock/skills", "path": "skills/engineering/diagnosing-bugs", "commit": "abeeaf9", "license": "MIT"},
+  "tdd": {"repo": "mattpocock/skills", "path": "skills/engineering/tdd", "commit": "abeeaf9", "license": "MIT", "note": "uses codebase-design"},
+  "codebase-design": {"repo": "mattpocock/skills", "path": "skills/engineering/codebase-design", "commit": "abeeaf9", "license": "MIT"},
+  "property-based-testing": {"repo": "trailofbits/skills", "path": "plugins/property-based-testing/skills/property-based-testing", "commit": "149d7b2", "license": "CC-BY-SA-4.0"},
+  "sharp-edges": {"repo": "trailofbits/skills", "path": "plugins/sharp-edges/skills/sharp-edges", "commit": "149d7b2", "license": "CC-BY-SA-4.0"},
+  "supply-chain-risk-auditor": {"repo": "trailofbits/skills", "path": "plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor", "commit": "149d7b2", "license": "CC-BY-SA-4.0", "requires": "uv (scripts run with uv run); queries osv.dev, npm, PyPI, deps.dev, scorecard.dev and api.github.com (uses your gh token only there)"},
+  "api-design-principles": {"repo": "wshobson/agents", "path": "plugins/backend-development/skills/api-design-principles", "commit": "51b9ae3", "license": "MIT"},
+  "postgresql-table-design": {"repo": "wshobson/agents", "path": "plugins/database-design/skills/postgresql-table-design", "commit": "51b9ae3", "license": "MIT"}
 }
