@@ -28,7 +28,7 @@ Layout:
 2. Copy the skill folder into `skills/<name>/` (folder name = the `name` in its frontmatter). Also copy any sibling skills it references (for example `../other-skill/SKILL.md`).
 3. Add an entry to `sources.json` (repo, path, short commit, license, and `requires` if it needs a CLI or other setup). Copy the upstream LICENSE into `licenses/<owner>-<repo>.LICENSE` if it is not there yet. Do not add a skill whose source has no license allowing redistribution; install it only locally and tell the user.
 4. Run `node scripts/build-catalog.mjs`.
-5. Install it: `powershell -ExecutionPolicy Bypass -File scripts/install.ps1 -Only <name>`.
+5. Install it: `powershell -ExecutionPolicy Bypass -File scripts/install.ps1 -Only <name>` (global), or add `-Project "<project path>"` to install only in that project's `.claude/skills` (preferred for project-specific or niche skills). Skills that reference `../../references/` need the library's `references/` folder, which the script copies too.
 6. Commit (`Add <name> skill`) and push to `main`.
 
 ## Updating skills

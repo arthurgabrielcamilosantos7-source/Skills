@@ -1,40 +1,506 @@
 {
-  "agent-browser": {"repo": "vercel-labs/agent-browser", "path": "skills/agent-browser", "commit": "1fde6b9", "license": "Apache-2.0", "requires": "npm install -g agent-browser && agent-browser install"},
-  "design-taste-frontend": {"repo": "Leonxlnx/taste-skill", "path": "skills/taste-skill", "commit": "f6b7657", "license": "MIT"},
-  "find-skills": {"repo": "vercel-labs/skills", "path": "skills/find-skills", "commit": "57217cf", "license": "MIT"},
-  "grilling": {"repo": "mattpocock/skills", "path": "skills/productivity/grilling", "commit": "abeeaf9", "license": "MIT"},
-  "handoff": {"repo": "mattpocock/skills", "path": "skills/productivity/handoff", "commit": "abeeaf9", "license": "MIT"},
-  "chief-of-staff": {"repo": "mattpocock/skills", "path": "skills/in-progress/chief-of-staff", "commit": "abeeaf9", "license": "MIT", "note": "experimental (in-progress upstream); uses retro, to-spec, to-tickets, implement-spec"},
-  "retro": {"repo": "mattpocock/skills", "path": "skills/engineering/retro", "commit": "abeeaf9", "license": "MIT"},
-  "to-spec": {"repo": "mattpocock/skills", "path": "skills/engineering/to-spec", "commit": "abeeaf9", "license": "MIT"},
-  "to-tickets": {"repo": "mattpocock/skills", "path": "skills/engineering/to-tickets", "commit": "abeeaf9", "license": "MIT"},
-  "implement-spec": {"repo": "mattpocock/skills", "path": "skills/engineering/implement-spec", "commit": "abeeaf9", "license": "MIT"},
-  "skill-library": {"repo": "local", "license": "MIT", "note": "meta-skill that searches and grows this library"},
-  "frontend-design": {"repo": "anthropics/skills", "path": "skills/frontend-design", "commit": "e4bb5d9", "license": "Apache-2.0"},
-  "theme-factory": {"repo": "anthropics/skills", "path": "skills/theme-factory", "commit": "e4bb5d9", "license": "Apache-2.0"},
-  "web-artifacts-builder": {"repo": "anthropics/skills", "path": "skills/web-artifacts-builder", "commit": "e4bb5d9", "license": "Apache-2.0", "requires": "bash, node and pnpm (the init script installs pnpm and npm packages when you run it)"},
-  "webapp-testing": {"repo": "anthropics/skills", "path": "skills/webapp-testing", "commit": "e4bb5d9", "license": "Apache-2.0", "requires": "Python with playwright (pip install playwright && playwright install chromium)"},
-  "algorithmic-art": {"repo": "anthropics/skills", "path": "skills/algorithmic-art", "commit": "e4bb5d9", "license": "Apache-2.0"},
-  "doc-coauthoring": {"repo": "anthropics/skills", "path": "skills/doc-coauthoring", "commit": "e4bb5d9", "license": "Apache-2.0"},
-  "verification-before-completion": {"repo": "obra/superpowers", "path": "skills/verification-before-completion", "commit": "22f0b46", "license": "MIT"},
-  "receiving-code-review": {"repo": "obra/superpowers", "path": "skills/receiving-code-review", "commit": "22f0b46", "license": "MIT"},
-  "diagnosing-bugs": {"repo": "mattpocock/skills", "path": "skills/engineering/diagnosing-bugs", "commit": "abeeaf9", "license": "MIT"},
-  "tdd": {"repo": "mattpocock/skills", "path": "skills/engineering/tdd", "commit": "abeeaf9", "license": "MIT", "note": "uses codebase-design"},
-  "codebase-design": {"repo": "mattpocock/skills", "path": "skills/engineering/codebase-design", "commit": "abeeaf9", "license": "MIT"},
-  "property-based-testing": {"repo": "trailofbits/skills", "path": "plugins/property-based-testing/skills/property-based-testing", "commit": "149d7b2", "license": "CC-BY-SA-4.0"},
-  "sharp-edges": {"repo": "trailofbits/skills", "path": "plugins/sharp-edges/skills/sharp-edges", "commit": "149d7b2", "license": "CC-BY-SA-4.0"},
-  "supply-chain-risk-auditor": {"repo": "trailofbits/skills", "path": "plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor", "commit": "149d7b2", "license": "CC-BY-SA-4.0", "requires": "uv (scripts run with uv run); queries osv.dev, npm, PyPI, deps.dev, scorecard.dev and api.github.com (uses your gh token only there)"},
-  "api-design-principles": {"repo": "wshobson/agents", "path": "plugins/backend-development/skills/api-design-principles", "commit": "51b9ae3", "license": "MIT"},
-  "postgresql-table-design": {"repo": "wshobson/agents", "path": "plugins/database-design/skills/postgresql-table-design", "commit": "51b9ae3", "license": "MIT"},
-  "scientific-critical-thinking": {"repo": "K-Dense-AI/scientific-agent-skills", "path": "skills/scientific-critical-thinking", "commit": "ec59a29", "license": "MIT", "modified": "removed the upstream 'Citing Scientific Agent Skills' section, which told the agent to add the authors' paper to user reports"},
-  "statistical-analysis": {"repo": "K-Dense-AI/scientific-agent-skills", "path": "skills/statistical-analysis", "commit": "ec59a29", "license": "MIT", "modified": "removed the upstream 'Citing Scientific Agent Skills' section", "requires": "Python with scipy/statsmodels/pandas when running analyses"},
-  "exploratory-data-analysis": {"repo": "K-Dense-AI/scientific-agent-skills", "path": "skills/exploratory-data-analysis", "commit": "ec59a29", "license": "MIT", "modified": "removed the upstream 'Citing Scientific Agent Skills' section", "requires": "Python with pandas"},
-  "citation-management": {"repo": "K-Dense-AI/scientific-agent-skills", "path": "skills/citation-management", "commit": "ec59a29", "license": "MIT", "modified": "removed the upstream 'Citing Scientific Agent Skills' section", "requires": "Python; scripts query OpenAlex, PubMed, Crossref, DataCite and arXiv (free public APIs)"},
-  "market-research-reports": {"repo": "K-Dense-AI/scientific-agent-skills", "path": "skills/market-research-reports", "commit": "ec59a29", "license": "MIT", "modified": "removed the upstream 'Citing Scientific Agent Skills' section"},
-  "differential-review": {"repo": "trailofbits/skills", "path": "plugins/differential-review/skills/differential-review", "commit": "149d7b2", "license": "CC-BY-SA-4.0"},
-  "ui-ux-pro-max": {"repo": "nextlevelbuilder/ui-ux-pro-max-skill", "path": ".claude/skills/ui-ux-pro-max", "commit": "6ec2bb5", "license": "MIT", "modified": "script paths changed from CLAUDE_PLUGIN_ROOT to CLAUDE_SKILL_DIR so it works as a standalone skill", "requires": "Python 3 (standard library only)"},
-  "source-verification": {"repo": "local", "license": "MIT", "note": "own skill: web/news fact-checking"},
-  "automation-design": {"repo": "local", "license": "MIT", "note": "own skill"},
-  "strategic-planning": {"repo": "local", "license": "MIT", "note": "own skill"},
-  "visual-quality-review": {"repo": "local", "license": "MIT", "note": "own skill"}
+  "agent-browser": {
+    "repo": "vercel-labs/agent-browser",
+    "path": "skills/agent-browser",
+    "commit": "1fde6b9",
+    "license": "Apache-2.0",
+    "requires": "npm install -g agent-browser && agent-browser install"
+  },
+  "design-taste-frontend": {
+    "repo": "Leonxlnx/taste-skill",
+    "path": "skills/taste-skill",
+    "commit": "f6b7657",
+    "license": "MIT"
+  },
+  "find-skills": {
+    "repo": "vercel-labs/skills",
+    "path": "skills/find-skills",
+    "commit": "57217cf",
+    "license": "MIT"
+  },
+  "grilling": {
+    "repo": "mattpocock/skills",
+    "path": "skills/productivity/grilling",
+    "commit": "abeeaf9",
+    "license": "MIT"
+  },
+  "handoff": {
+    "repo": "mattpocock/skills",
+    "path": "skills/productivity/handoff",
+    "commit": "abeeaf9",
+    "license": "MIT"
+  },
+  "chief-of-staff": {
+    "repo": "mattpocock/skills",
+    "path": "skills/in-progress/chief-of-staff",
+    "commit": "abeeaf9",
+    "license": "MIT",
+    "note": "experimental (in-progress upstream); uses retro, to-spec, to-tickets, implement-spec"
+  },
+  "retro": {
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/retro",
+    "commit": "abeeaf9",
+    "license": "MIT"
+  },
+  "to-spec": {
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/to-spec",
+    "commit": "abeeaf9",
+    "license": "MIT"
+  },
+  "to-tickets": {
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/to-tickets",
+    "commit": "abeeaf9",
+    "license": "MIT"
+  },
+  "implement-spec": {
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/implement-spec",
+    "commit": "abeeaf9",
+    "license": "MIT"
+  },
+  "skill-library": {
+    "repo": "local",
+    "license": "MIT",
+    "note": "meta-skill that searches and grows this library"
+  },
+  "ig-caption-writer": {
+    "repo": "sergebulaev/instagram-skills",
+    "commit": "823c681",
+    "license": "MIT",
+    "note": "usa ../../references/ (copiado para references/ na raiz e .claude/references/ no projeto). Publicação via Publora não configurada",
+    "path": "skills/ig-caption-writer"
+  },
+  "ig-carousel-planner": {
+    "repo": "sergebulaev/instagram-skills",
+    "commit": "823c681",
+    "license": "MIT",
+    "note": "usa ../../references/ (copiado para references/ na raiz e .claude/references/ no projeto). Publicação via Publora não configurada",
+    "path": "skills/ig-carousel-planner"
+  },
+  "ig-content-planner": {
+    "repo": "sergebulaev/instagram-skills",
+    "commit": "823c681",
+    "license": "MIT",
+    "note": "usa ../../references/ (copiado para references/ na raiz e .claude/references/ no projeto). Publicação via Publora não configurada",
+    "path": "skills/ig-content-planner"
+  },
+  "ig-hashtag-strategist": {
+    "repo": "sergebulaev/instagram-skills",
+    "commit": "823c681",
+    "license": "MIT",
+    "note": "usa ../../references/ (copiado para references/ na raiz e .claude/references/ no projeto). Publicação via Publora não configurada",
+    "path": "skills/ig-hashtag-strategist"
+  },
+  "ig-hook-extractor": {
+    "repo": "sergebulaev/instagram-skills",
+    "commit": "823c681",
+    "license": "MIT",
+    "note": "usa ../../references/ (copiado para references/ na raiz e .claude/references/ no projeto). Publicação via Publora não configurada",
+    "path": "skills/ig-hook-extractor"
+  },
+  "ig-humanizer": {
+    "repo": "sergebulaev/instagram-skills",
+    "commit": "823c681",
+    "license": "MIT",
+    "note": "usa ../../references/ (copiado para references/ na raiz e .claude/references/ no projeto). Publicação via Publora não configurada",
+    "path": "skills/ig-humanizer"
+  },
+  "ig-profile-optimizer": {
+    "repo": "sergebulaev/instagram-skills",
+    "commit": "823c681",
+    "license": "MIT",
+    "note": "usa ../../references/ (copiado para references/ na raiz e .claude/references/ no projeto). Publicação via Publora não configurada",
+    "path": "skills/ig-profile-optimizer"
+  },
+  "social-strategy": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/social-strategy"
+  },
+  "content-pillars": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/content-pillars"
+  },
+  "content-calendar": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/content-calendar"
+  },
+  "audience-research": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/audience-research"
+  },
+  "reels-script": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/reels-script"
+  },
+  "talking-head-and-piece-to-camera": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/talking-head-and-piece-to-camera"
+  },
+  "educational-content-and-how-to": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/educational-content-and-how-to"
+  },
+  "story-writer": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/story-writer"
+  },
+  "instagram-growth": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/instagram-growth"
+  },
+  "instagram-seo": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/instagram-seo"
+  },
+  "analytics-and-reporting": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/analytics-and-reporting"
+  },
+  "content-audit": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/content-audit"
+  },
+  "design-and-templates": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/design-and-templates"
+  },
+  "quote-cards-and-text-graphics": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/quote-cards-and-text-graphics"
+  },
+  "trend-jacking": {
+    "repo": "social-media-skills/skills",
+    "commit": "f28cef2",
+    "license": "MIT",
+    "note": "lê brand-profile.md do projeto; integrações citadas (WoopSocial etc.) não configuradas",
+    "path": "skills/trend-jacking"
+  },
+  "content-strategy": {
+    "repo": "coreyhaines31/marketingskills",
+    "commit": "5b2b400",
+    "license": "MIT",
+    "note": "lê .agents/product-marketing.md do projeto",
+    "path": "skills/content-strategy"
+  },
+  "copywriting": {
+    "repo": "coreyhaines31/marketingskills",
+    "commit": "5b2b400",
+    "license": "MIT",
+    "note": "lê .agents/product-marketing.md do projeto",
+    "path": "skills/copywriting"
+  },
+  "copy-editing": {
+    "repo": "coreyhaines31/marketingskills",
+    "commit": "5b2b400",
+    "license": "MIT",
+    "note": "lê .agents/product-marketing.md do projeto",
+    "path": "skills/copy-editing"
+  },
+  "marketing-psychology": {
+    "repo": "coreyhaines31/marketingskills",
+    "commit": "5b2b400",
+    "license": "MIT",
+    "note": "lê .agents/product-marketing.md do projeto",
+    "path": "skills/marketing-psychology"
+  },
+  "video": {
+    "repo": "coreyhaines31/marketingskills",
+    "commit": "5b2b400",
+    "license": "MIT",
+    "note": "lê .agents/product-marketing.md do projeto",
+    "path": "skills/video"
+  },
+  "analytics": {
+    "repo": "coreyhaines31/marketingskills",
+    "commit": "5b2b400",
+    "license": "MIT",
+    "note": "lê .agents/product-marketing.md do projeto",
+    "path": "skills/analytics"
+  },
+  "competitor-profiling": {
+    "repo": "coreyhaines31/marketingskills",
+    "commit": "5b2b400",
+    "license": "MIT",
+    "note": "lê .agents/product-marketing.md do projeto",
+    "path": "skills/competitor-profiling"
+  },
+  "cro": {
+    "repo": "coreyhaines31/marketingskills",
+    "commit": "5b2b400",
+    "license": "MIT",
+    "note": "lê .agents/product-marketing.md do projeto",
+    "path": "skills/cro"
+  },
+  "canvas-design": {
+    "repo": "anthropics/skills",
+    "path": "skills/canvas-design",
+    "commit": "e4bb5d9",
+    "license": "Apache-2.0"
+  },
+  "visual-design-foundations": {
+    "repo": "wshobson/agents",
+    "path": "plugins/ui-design/skills/visual-design-foundations",
+    "commit": "51b9ae3",
+    "license": "MIT"
+  },
+  "daiane-brand-identity": {
+    "repo": "local",
+    "license": "MIT",
+    "project": "projeto site mae (Daiane Menandro)",
+    "note": "skill exclusiva do projeto"
+  },
+  "daiane-instagram-strategy": {
+    "repo": "local",
+    "license": "MIT",
+    "project": "projeto site mae (Daiane Menandro)",
+    "note": "skill exclusiva do projeto"
+  },
+  "daiane-carousel-design": {
+    "repo": "local",
+    "license": "MIT",
+    "project": "projeto site mae (Daiane Menandro)",
+    "note": "skill exclusiva do projeto",
+    "requires": "Node.js + agent-browser (npm install -g agent-browser && agent-browser install)"
+  },
+  "daiane-content-writer": {
+    "repo": "local",
+    "license": "MIT",
+    "project": "projeto site mae (Daiane Menandro)",
+    "note": "skill exclusiva do projeto"
+  },
+  "daiane-health-ethics-review": {
+    "repo": "local",
+    "license": "MIT",
+    "project": "projeto site mae (Daiane Menandro)",
+    "note": "skill exclusiva do projeto"
+  },
+  "daiane-conversion-strategy": {
+    "repo": "local",
+    "license": "MIT",
+    "project": "projeto site mae (Daiane Menandro)",
+    "note": "skill exclusiva do projeto"
+  },
+  "daiane-content-quality-control": {
+    "repo": "local",
+    "license": "MIT",
+    "project": "projeto site mae (Daiane Menandro)",
+    "note": "skill exclusiva do projeto"
+  },
+  "frontend-design": {
+    "repo": "anthropics/skills",
+    "path": "skills/frontend-design",
+    "commit": "e4bb5d9",
+    "license": "Apache-2.0"
+  },
+  "theme-factory": {
+    "repo": "anthropics/skills",
+    "path": "skills/theme-factory",
+    "commit": "e4bb5d9",
+    "license": "Apache-2.0"
+  },
+  "web-artifacts-builder": {
+    "repo": "anthropics/skills",
+    "path": "skills/web-artifacts-builder",
+    "commit": "e4bb5d9",
+    "license": "Apache-2.0",
+    "requires": "bash, node and pnpm (the init script installs pnpm and npm packages when you run it)"
+  },
+  "webapp-testing": {
+    "repo": "anthropics/skills",
+    "path": "skills/webapp-testing",
+    "commit": "e4bb5d9",
+    "license": "Apache-2.0",
+    "requires": "Python with playwright (pip install playwright && playwright install chromium)"
+  },
+  "algorithmic-art": {
+    "repo": "anthropics/skills",
+    "path": "skills/algorithmic-art",
+    "commit": "e4bb5d9",
+    "license": "Apache-2.0"
+  },
+  "doc-coauthoring": {
+    "repo": "anthropics/skills",
+    "path": "skills/doc-coauthoring",
+    "commit": "e4bb5d9",
+    "license": "Apache-2.0"
+  },
+  "verification-before-completion": {
+    "repo": "obra/superpowers",
+    "path": "skills/verification-before-completion",
+    "commit": "22f0b46",
+    "license": "MIT"
+  },
+  "receiving-code-review": {
+    "repo": "obra/superpowers",
+    "path": "skills/receiving-code-review",
+    "commit": "22f0b46",
+    "license": "MIT"
+  },
+  "diagnosing-bugs": {
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/diagnosing-bugs",
+    "commit": "abeeaf9",
+    "license": "MIT"
+  },
+  "tdd": {
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/tdd",
+    "commit": "abeeaf9",
+    "license": "MIT",
+    "note": "uses codebase-design"
+  },
+  "codebase-design": {
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/codebase-design",
+    "commit": "abeeaf9",
+    "license": "MIT"
+  },
+  "property-based-testing": {
+    "repo": "trailofbits/skills",
+    "path": "plugins/property-based-testing/skills/property-based-testing",
+    "commit": "149d7b2",
+    "license": "CC-BY-SA-4.0"
+  },
+  "sharp-edges": {
+    "repo": "trailofbits/skills",
+    "path": "plugins/sharp-edges/skills/sharp-edges",
+    "commit": "149d7b2",
+    "license": "CC-BY-SA-4.0"
+  },
+  "supply-chain-risk-auditor": {
+    "repo": "trailofbits/skills",
+    "path": "plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor",
+    "commit": "149d7b2",
+    "license": "CC-BY-SA-4.0",
+    "requires": "uv (scripts run with uv run); queries osv.dev, npm, PyPI, deps.dev, scorecard.dev and api.github.com (uses your gh token only there)"
+  },
+  "api-design-principles": {
+    "repo": "wshobson/agents",
+    "path": "plugins/backend-development/skills/api-design-principles",
+    "commit": "51b9ae3",
+    "license": "MIT"
+  },
+  "postgresql-table-design": {
+    "repo": "wshobson/agents",
+    "path": "plugins/database-design/skills/postgresql-table-design",
+    "commit": "51b9ae3",
+    "license": "MIT"
+  },
+  "scientific-critical-thinking": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "path": "skills/scientific-critical-thinking",
+    "commit": "ec59a29",
+    "license": "MIT",
+    "modified": "removed the upstream 'Citing Scientific Agent Skills' section, which told the agent to add the authors' paper to user reports"
+  },
+  "statistical-analysis": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "path": "skills/statistical-analysis",
+    "commit": "ec59a29",
+    "license": "MIT",
+    "modified": "removed the upstream 'Citing Scientific Agent Skills' section",
+    "requires": "Python with scipy/statsmodels/pandas when running analyses"
+  },
+  "exploratory-data-analysis": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "path": "skills/exploratory-data-analysis",
+    "commit": "ec59a29",
+    "license": "MIT",
+    "modified": "removed the upstream 'Citing Scientific Agent Skills' section",
+    "requires": "Python with pandas"
+  },
+  "citation-management": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "path": "skills/citation-management",
+    "commit": "ec59a29",
+    "license": "MIT",
+    "modified": "removed the upstream 'Citing Scientific Agent Skills' section",
+    "requires": "Python; scripts query OpenAlex, PubMed, Crossref, DataCite and arXiv (free public APIs)"
+  },
+  "market-research-reports": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "path": "skills/market-research-reports",
+    "commit": "ec59a29",
+    "license": "MIT",
+    "modified": "removed the upstream 'Citing Scientific Agent Skills' section"
+  },
+  "differential-review": {
+    "repo": "trailofbits/skills",
+    "path": "plugins/differential-review/skills/differential-review",
+    "commit": "149d7b2",
+    "license": "CC-BY-SA-4.0"
+  },
+  "ui-ux-pro-max": {
+    "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "path": ".claude/skills/ui-ux-pro-max",
+    "commit": "6ec2bb5",
+    "license": "MIT",
+    "modified": "script paths changed from CLAUDE_PLUGIN_ROOT to CLAUDE_SKILL_DIR so it works as a standalone skill",
+    "requires": "Python 3 (standard library only)"
+  },
+  "source-verification": {
+    "repo": "local",
+    "license": "MIT",
+    "note": "own skill: web/news fact-checking"
+  },
+  "automation-design": {
+    "repo": "local",
+    "license": "MIT",
+    "note": "own skill"
+  },
+  "strategic-planning": {
+    "repo": "local",
+    "license": "MIT",
+    "note": "own skill"
+  },
+  "visual-quality-review": {
+    "repo": "local",
+    "license": "MIT",
+    "note": "own skill"
+  }
 }

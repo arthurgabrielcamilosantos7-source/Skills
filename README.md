@@ -14,6 +14,19 @@ Isso copia todas as skills para `~/.claude/skills`, e elas passam a valer em tod
 
 Algumas skills precisam de programas extras. Esses requisitos estão no campo `requires` de [sources.json](sources.json). Por exemplo, `agent-browser` precisa de `npm install -g agent-browser` e `agent-browser install`.
 
+### Instalar só num projeto
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\install.ps1 -Only nome1,nome2 -Project "C:\caminho\do\projeto"
+```
+
+Isso copia as skills para `<projeto>\.claude\skills`. A pasta [references/](references/) é usada pelas skills `ig-*` e vai para `<projeto>\.claude\references`. Perfis que já foram preenchidos não são sobrescritos.
+
+## Coleções
+
+- **Instagram e marketing:** `ig-*`, skills de social media, de marketing e de design. Ver o [CATALOG.md](CATALOG.md).
+- **Projeto Daiane Menandro:** `daiane-*`, 7 skills exclusivas do Instagram profissional @daianemenandro.psi. São instaladas só no projeto, junto com as 32 skills de apoio listadas em `sources.json` (campo `note`).
+
 ## Adicionar skills
 
 A skill `skill-library` ensina o Claude a usar e ampliar esta biblioteca. Basta pedir algo como "instale a skill X" e ele faz o resto: baixa da fonte original, copia para `skills/`, registra em `sources.json`, regenera o catálogo, instala e faz push.
